@@ -27,6 +27,8 @@ W_PulseSensor w_pulsesensor;
 W_AnalogRead w_analogRead;
 W_DigitalRead w_digitalRead;
 W_MarkerMode w_markermode;
+W_ssvep w_ssvep;
+W_ssvep_analyzer w_ssvep_analyzer;
 
 
 //ADD YOUR WIDGET TO WIDGETS OF WIDGETMANAGER
@@ -102,6 +104,14 @@ void setupWidgets(PApplet _this, ArrayList<Widget> w){
     w_markermode = new W_MarkerMode(_this);
     w_markermode.setTitle("Marker Mode");
     addWidget(w_markermode, w);
+
+    w_ssvep = new W_ssvep(_this);
+    w_ssvep.setTitle("SSVEP stimulation");
+    addWidget(w_ssvep, w);
+
+    w_ssvep_analyzer = new W_ssvep_analyzer(_this);
+    w_ssvep_analyzer.setTitle("SSVEP analyzer");
+    addWidget(w_ssvep_analyzer, w);
 
   }
 
